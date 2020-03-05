@@ -3,7 +3,12 @@
 language: R
 cache: packages
 warnings_are_errors: true
-dist: bionic
 os:
   - linux
   - osx
+notifications:
+  email:
+    recipients:
+      - nabipoor@ualberta.ca
+    on_success: always
+    on_failure: always
