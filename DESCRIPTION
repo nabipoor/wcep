@@ -22,7 +22,7 @@ Imports:
          tidyr (>= 1.0.0)
 RoxygenNote: 7.0.2
 Suggests: 
-    testthat
+    testthat (>= 2.3.2)
 Collate: 
     'data.R'
     'nam.R'
