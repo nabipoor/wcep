@@ -1,0 +1,31 @@
+Package: wcep
+Type: Package
+Title: Survival Analysis for Weighted Composite Endpoints
+Version: 1.0.0
+Authors@R: c(person("Majid", "Nabipoor", email = "nabipoor@ualberta.ca", role=c("aut", "cre")), 
+           person("Cynthia", "Westerhout", email="cindy.westerhout@ualberta.ca", role=c("aut")),
+           person("Jeffrey", "Bakal", email="jbakal@ualberta.ca", role=c("aut")))
+Maintainer: Majid Nabipoor <nabipoor@ualberta.ca>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.6.0)
+Imports: 
+         coin  (>= 1.3-1),
+         dplyr (>= 0.8.3),
+         graphics (>= 3.6.1),
+         grDevices (>= 3.6.1),
+         progress (>= 1.2.2),
+         stats (>= 3.6.1),
+         tidyr (>= 1.0.0)
+RoxygenNote: 7.0.2
+Suggests: 
+    testthat
+Collate: 
+    'data.R'
+    'nam.R'
+    'plot.R'
+    'wcep_core.R'
+    'wcep.R'
