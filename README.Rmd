@@ -1,30 +1,62 @@
 ---
-title: "Survival Analysis for Weighted Composite Endpoints"
-output: html_document
+output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
 ```
 
-## wcep
+# wcep
 
-Survival Analysis for Weighted Composite Endpoints 
+<!-- badges: start -->
+<!-- badges: end -->
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The goal of wcep is to analyze time-to-event data with multiple events, for instance death and shock with related severity weights. The weight of death is always 1 and other events have a positive weight smaller than 1.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+This package provides two main functions: wcep produce survival probabilities with related variances, and plot function uses survival probabilities to ilustrate Kaplan Meier curve with prespecified confidence interval. Also, it provides a dataset.
+
+## Installation
+
+You can install the released version of wcep from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("wcep")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("nabipoor/wcep")
+```
+## Example
+
+Basic examples provided in the Help document.
+
+```{r example}
+library(wcep)
+## basic example code
+```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
 ```{r cars}
 summary(cars)
 ```
 
-## Including Plots
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo = FALSE}
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
