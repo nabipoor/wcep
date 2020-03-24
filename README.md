@@ -14,7 +14,7 @@ than 1.
 
 This package provides two main functions: wcep function produces
 survival probabilities with related variances, and plot function uses
-survival probabilities to ilustrate Kaplan Meier curve with prespecified
+survival probabilities to illustrate Kaplan Meier curve with prespecified
 confidence interval. Also, it provides a dataset.
 
 ## Installation

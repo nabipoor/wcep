@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 The goal of wcep is to analyze time-to-event data with multiple events, for instance death and shock with related severity weights. The weight of death is always 1 and other events have a positive weight smaller than 1.
 
-This package provides two main functions: wcep produce survival probabilities with related variances, and plot function uses survival probabilities to ilustrate Kaplan Meier curve with prespecified confidence interval. Also, it provides a dataset.
+This package provides two main functions: wcep produce survival probabilities with related variances, and plot function uses survival probabilities to illustrate Kaplan Meier curve with prespecified confidence interval. Also, it provides a dataset.
 
 ## Installation
 
