@@ -9,6 +9,7 @@
 ## R CMD check results
 This is the first submission.
 There were no ERRORs, WARRNINGS, or NOTEs.
+This package downloaded from github by 3 different teams in Canada, USA and Netherlands and used successfully on Windows and Mac.
 
 ## Downstream dependencies
 This package is the first version of this package.

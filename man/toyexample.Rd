@@ -4,7 +4,8 @@
 \name{toyexample}
 \alias{toyexample}
 \title{Toy example}
-\format{A data frame with 104 rows and 4 culomns
+\format{
+A data frame with 104 rows and 4 columns
 \describe{
    \item{PTID}{ID number of patients}
    \item{EvTp}{Event Types: SHK as Shock, CHF as Congestive Heart
@@ -19,12 +20,13 @@
  Refining clinical trial composite outcomes: an application to the
  Assessment of the Safety and Efficacy of a New Thrombolytic-3
  (ASSENT-3) trial
- \url{https://www.ncbi.nlm.nih.gov/pubmed/21570513}}
+ \url{https://www.ncbi.nlm.nih.gov/pubmed/21570513}
+}
 \usage{
 toyexample
 }
 \description{
-A dataset containing patient IDs, event types, event times, and
+A data set containing patient IDs, event types, event times, and
 gender of 100 patients
 }
 \keyword{datasets}

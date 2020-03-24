@@ -29,9 +29,9 @@
 
 \item{lwd}{line width}
 
-\item{xlab}{first axis lable}
+\item{xlab}{first axis label}
 
-\item{ylab}{second axis lable}
+\item{ylab}{second axis label}
 
 \item{xlim}{first axis limits}
 
@@ -43,5 +43,5 @@
 setOldClass("wcep")}
 }
 \description{
-Create a plot of Kaplan-Meier curve with its specified confidence iterval
+Create a plot of Kaplan-Meier curve with its specified confidence interval
 }

@@ -1,9 +1,9 @@
 #' Toy example
 #'
-#' A dataset containing patient IDs, event types, event times, and
+#' A data set containing patient IDs, event types, event times, and
 #' gender of 100 patients
 #'
-#' @format A data frame with 104 rows and 4 culomns
+#' @format A data frame with 104 rows and 4 columns
 #' \describe{
 #'    \item{PTID}{ID number of patients}
 #'    \item{EvTp}{Event Types: SHK as Shock, CHF as Congestive Heart

@@ -1,13 +1,13 @@
 #' wcep plot
 #'
-#' Create a plot of Kaplan-Meier curve with its specified confidence iterval
+#' Create a plot of Kaplan-Meier curve with its specified confidence interval
 #' @param x is an object of class "wcep"
 #' @param main title of plot
 #' @param type type of plot
 #' @param lty line type
 #' @param lwd line width
-#' @param xlab first axis lable
-#' @param ylab second axis lable
+#' @param xlab first axis label
+#' @param ylab second axis label
 #' @param xlim first axis limits
 #' @param ylim second axis limits
 #' @param cex legend font size

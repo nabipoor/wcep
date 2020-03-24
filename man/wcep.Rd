@@ -8,7 +8,7 @@ wcep(x, ew, alpha = 0.05, split = FALSE)
 }
 \arguments{
 \item{x}{This data frame usually has 3 columns. The first column specifies patient ID,
-which is a character or numeric vector, the second column is a factor with charachter values
+which is a character or numeric vector, the second column is a factor with character values
 of event types. The third column is a numeric vector of event times. If split = TRUE,
 then the forth column is a character vector of split groups of at most two groups,
 like gender.}
@@ -23,8 +23,8 @@ if it is not specified, by default is 0.05.}
 \item{split}{A logical value of T or F which allows to compare two groups.}
 }
 \description{
-Analyse given data frame and return Kaplan-Meier survival probabilities together with the specified confidence interval.
- \code{wcep} modifies Kaplan-Meier curve by taking into account severity weights of different event. Alternative methods are Anderson Gill model and win ratio of composite outcomes.The function takes event dataset and user-specified severity weights  to generate a modified Kaplan-Meier curve and comparison statistics based on the weighted composite endpoint method.  The user supplies the event datast, the weights, and the factor to split on . The package will generate the weighted survival curve, confidence interval and test the differences between the two groups.
+Analyze given data frame and return Kaplan-Meier survival probabilities together with the specified confidence interval.
+ \code{wcep} modifies Kaplan-Meier curve by taking into account severity weights of different event. Alternative methods are Anderson Gill model and win ratio of composite outcomes.The function takes event dataset and user-specified severity weights  to generate a modified Kaplan-Meier curve and comparison statistics based on the weighted composite endpoint method.  The user supplies the event data set, the weights, and the factor to split on . The package will generate the weighted survival curve, confidence interval and test the differences between the two groups.
 }
 \section{References}{
 
