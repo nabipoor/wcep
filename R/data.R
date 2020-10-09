@@ -18,5 +18,5 @@
 #'  Refining clinical trial composite outcomes: an application to the
 #'  Assessment of the Safety and Efficacy of a New Thrombolytic-3
 #'  (ASSENT-3) trial
-#'  \url{https://www.ncbi.nlm.nih.gov/pubmed/21570513}
+#'  \url{https://pubmed.ncbi.nlm.nih.gov/21570513}
 "toyexample"
