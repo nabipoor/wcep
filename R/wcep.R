@@ -12,9 +12,9 @@ NULL
 #' then the forth column is a character vector of split groups of at most two groups,
 #' like gender.
 #'
-#' @param ew This data frame has two columns. The first column
+#' @param EW This data frame has two columns. The first column
 #' specifies a character vector of event types. The second column specify weights.
-#' The naming of event types in x and ew should be exactly similar.
+#' The naming of event types in x and EW should be exactly similar.
 #'
 #' @param alpha A numeric value between 0-1 which specifies the confidence level,
 #' if it is not specified, by default is 0.05.
@@ -28,13 +28,13 @@ NULL
 #' @examples
 #' data(toyexample)
 #' #event weights
-#' ew <- data.frame(event = c('CHF','DTH','SHK','REMI'), weight = c(0.3,1,0.5,0.2))
-#' res1 <- wcep(toyexample, ew)
+#' EW <- data.frame(event = c('CHF','DTH','SHK','REMI'), weight = c(0.3,1,0.5,0.2))
+#' res1 <- wcep(toyexample, EW)
 #' str(res1)
 #' res1$survival_probabilities
 #' plot(res1)
 #' #comparing two genders
-#' res2 <- wcep(toyexample, ew, split=TRUE)
+#' res2 <- wcep(toyexample, EW, split=TRUE)
 #' plot(res2)
 #' #wilcox and t test
 #' res2$Wilcoxontest
@@ -50,8 +50,7 @@ NULL
 #' @import coin dplyr progress tidyr
 #' @export
 
-
- wcep <- function(x, ew, alpha = 0.05 , split = FALSE){
+ wcep <- function(x, EW, alpha = 0.05 , split = FALSE){
 
           if (dim(x)[2] < 3 | dim(x)[2] > 4) {
               return(noquote("Error: Data frame x should have 3 columns for one group or 4 columns for two groups comparison"))
@@ -73,14 +72,14 @@ NULL
             pb <- progress_bar$new(
               format = " work progress [:bar] :percent",
               total = NA, clear = FALSE, width= 80)
-            res <- wcep_core(x[, 1:3], ew, alpha)
+            res <- wcep_core(x[, 1:3], EW, alpha)
           } else {
             groups <- unique(x[, 4])
             for(i in 1:2) {
               pb <- progress_bar$new(
                 format = " Progress [:bar] :percent",
                 total = NA, clear = FALSE, width= 80)
-              res[[paste0(" ", groups[i], sep="")]] <- wcep_core(x[which(x[, 4] == groups[i]), 1:3], ew,                                                                          alpha)
+              res[[paste0(" ", groups[i], sep="")]] <- wcep_core(x[which(x[, 4] == groups[i]), 1:3], EW,                                                                          alpha)
             }
             res$Wilcoxontest <- wilcoxsign_test((res[[paste0(" ", groups[1], sep="")]])$survival_probabilities ~
                                 (res[[paste0(" ", groups[2], sep="")]])$survival_probabilities, zero.method = c("Pratt"))

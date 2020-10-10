@@ -4,7 +4,7 @@
 \alias{wcep}
 \title{Analysis of weighted composite endpoints}
 \usage{
-wcep(x, ew, alpha = 0.05, split = FALSE)
+wcep(x, EW, alpha = 0.05, split = FALSE)
 }
 \arguments{
 \item{x}{This data frame usually has 3 columns. The first column specifies patient ID,
@@ -13,9 +13,9 @@ of event types. The third column is a numeric vector of event times. If split = 
 then the forth column is a character vector of split groups of at most two groups,
 like gender.}
 
-\item{ew}{This data frame has two columns. The first column
+\item{EW}{This data frame has two columns. The first column
 specifies a character vector of event types. The second column specify weights.
-The naming of event types in x and ew should be exactly similar.}
+The naming of event types in x and EW should be exactly similar.}
 
 \item{alpha}{A numeric value between 0-1 which specifies the confidence level,
 if it is not specified, by default is 0.05.}
@@ -36,13 +36,13 @@ controlled trails, Statistical Methods in Medicine Research Vol. 24(6) 980-988
 \examples{
 data(toyexample)
 #event weights
-ew <- data.frame(event = c('CHF','DTH','SHK','REMI'), weight = c(0.3,1,0.5,0.2))
-res1 <- wcep(toyexample, ew)
+EW <- data.frame(event = c('CHF','DTH','SHK','REMI'), weight = c(0.3,1,0.5,0.2))
+res1 <- wcep(toyexample, EW)
 str(res1)
 res1$survival_probabilities
 plot(res1)
 #comparing two genders
-res2 <- wcep(toyexample, ew, split=TRUE)
+res2 <- wcep(toyexample, EW, split=TRUE)
 plot(res2)
 #wilcox and t test
 res2$Wilcoxontest

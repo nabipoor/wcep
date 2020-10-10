@@ -65,8 +65,13 @@
               s <- cumsum(sapply(2:dim(s_table1)[2], function(j){
                 pb$tick()
                 drev <- data.frame( key = s_table1[, j] / s_table1[, j - 1])
-                pj <- table(left_join(drev, Key, by = "key")[, 2]) / sum(s_table1[, j - 1])
-                (1 - pj%*%ew[, 2])^(-2)*(t(ew[,2])%*%(diag(pj)- pj%*%t(pj))%*%ew[,2])
+                f<-table(dplyr::left_join(drev, Key, by = "key")[, 2])
+                u=attr(f,"dimnames")[[1]]
+                p<-data.frame(key=Key[,2],0)
+                p[,2]<-sapply(1:dim(p)[1],function(i){ifelse(length(which(u==p[i,1]))!=0, f[which(u==p[i,1])], 0)})
+                pj<-matrix(p[,2] / sum(s_table1[, j - 1]), ncol=1)
+                uj<- matrix(t(ew[, 2]), nrow=1)%*%pj
+                (1 - uj)^(-2)*(t(ew[,2])%*%(diag(as.vector(pj))- pj%*%t(pj))%*%ew[,2])
               }))*apply(s_table, 1, mean)^2 / (dim(s_table)[2])
               out$variance <- s
               upper <- out$survival_probabilities +  qnorm(1-alpha / 2) * sqrt(s)
