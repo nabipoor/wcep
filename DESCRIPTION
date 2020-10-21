@@ -6,8 +6,8 @@ Authors@R: c(person("Majid", "Nabipoor", email = "nabipoor@ualberta.ca", role=c(
            person("Cynthia", "Westerhout", email="cindy.westerhout@ualberta.ca", role=c("aut")),
            person("Jeffrey", "Bakal", email="jbakal@ualberta.ca", role=c("aut")))
 Maintainer: Majid Nabipoor <nabipoor@ualberta.ca>
-Description: Analyze given data frame with multiple endpoints and return Kaplan Meier survival probabilities together with the specified confidence interval.
-License: CC0
+Description: Analyze given data frame with multiple endpoints and return Kaplan-Meier survival probabilities together with the specified confidence interval.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Language: en-us

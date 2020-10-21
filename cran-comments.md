@@ -10,9 +10,10 @@
 This is the first submission.
 There were no ERRORs, WARRNINGS, or NOTEs.
 This package downloaded from github by 3 different teams in Canada, USA and Netherlands and used successfully on Windows and Mac.
+By running check_rhub(), there is a note for misspell of Kaplan, however the spell is correct. Spell_check() done 
 
 ## Downstream dependencies
-This package is the first version of this package.
+This is the first version (1.0.0) of this package.
 
 
 ## Other comments
