@@ -2,25 +2,25 @@
 #'
 # Function: wcep_core
 #
-# analize Weighted Composit EndPoints for one data set and produce life table, survival
+# Analyze Weighted Composite EndPoints for one data set and produce life table, survival
 # probabilities, variances, and 95% C.I. by given alpha or by default alpha = 0.05.
 #
 # Authors: Majid Nabipoor, Jeff Bakal
-# revised: Sep. 2019, Jan. 2020
+# revised: Sep. 2019, Jan. 2020, Oct. 2020
 
  wcep_core <- function(x, ew, alpha) {
 
               # list of output
               out <- list()
               class(out) <- "wcep"
-              # add a numerical pateint ID column
+              # add a numerical patient ID column
               pt_h <- as.factor(x[, 1])
               ptid_h <- 1:length(unique(pt_h))
               dd <- data.frame(pt_h = unique(pt_h), ptid_h)
               names(dd) <- c(names(x)[1], "c4")
               x1 <- merge(x, dd, by = names(x)[1])
 
-              # Numirate simillar events for a patient; SHK SHK -> SHK1 SHK2
+              # Numerate similar events for a patient; SHK SHK -> SHK1 SHK2
               evtp_h <- as.character(x1[, 2])
               evtm_h <- as.numeric(x1[, 3])
               invisible(sapply(ptid_h, function(i) {ind <- which(x1[, 4] == i);
