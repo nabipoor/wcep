@@ -13,7 +13,11 @@ This package downloaded from github by 3 different teams in Canada, USA and Neth
 By running check_rhub(), there is a note for misspell of Kaplan, however the spell is correct. Spell_check() done 
 
 ## Downstream dependencies
+<<<<<<< HEAD
 This is the first version (1.0.0) of this package.
+=======
+This is the first version of this package.
+>>>>>>> 7f2b89d4895080a6951c310d71f9206646178f53
 
 
 ## Other comments
